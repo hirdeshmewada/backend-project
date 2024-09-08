@@ -185,8 +185,13 @@ return res.status(200)
 .clearCookie("refreshToken",options)
 .json(new ApiResponse(200,{},"User logged out successfully"))
 });
+ 
+
+
 
 const refreshAccessToken=asyncHandler(async(req,res)=>{
+
+    console.log("fjjsdjafkljfaskl");
   const incomingRefreshToken = req.cookies.refreshToken || req.body.refreshToken
 
   if(!incomingRefreshToken){
